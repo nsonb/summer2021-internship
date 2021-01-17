@@ -1,11 +1,11 @@
-import { decode } from "blurhash";
 import { Blurhash } from "react-blurhash";
+import { restaurantData } from '../types/type';
 
-const Restaurant = ({restaurant}) => {
-    console.log(restaurant)
-    const hash = restaurant.blurhash
-    return <div key={restaurant.blurhash}>
-        {restaurant.name}
+const Restaurant = (props: {restaurant : restaurantData}) => {
+    console.log(props.restaurant)
+    const hash = props.restaurant.blurhash
+    return <div key={props.restaurant.blurhash}>
+        {props.restaurant.name}
         <Blurhash
             hash={hash}
             width={400}
