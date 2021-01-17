@@ -5,12 +5,8 @@ const RestaurantCarousel = ({restaurantList}) => {
         return <Restaurant restaurant={restaurant} key={restaurant.blurhash}></Restaurant>
     })
 
-    const style = {
-        display: 'flex',
-        flexDirection: 'horizontal'
-    }
     return (
-        <div style={style}>
+        <div>
             {renderRestaurant}
         </div>
     )

@@ -1,15 +1,15 @@
-import {popularRes, newRes, nearRes} from './api/discoveryPage.js';
+import {popularRes, newRes, nearRes} from './api/discoveryPage';
 import RestaurantCarousel from './components/RestaurantCarousel'
 
 const App = () => {
   return (
     <div className="App">
       popular
-      <RestaurantCarousel restaurantList = {popularRes.restaurants}></RestaurantCarousel>
+      <RestaurantCarousel restaurantList = {popularRes}></RestaurantCarousel>
       near
-      <RestaurantCarousel restaurantList = {nearRes.restaurants}></RestaurantCarousel>
+      <RestaurantCarousel restaurantList = {nearRes}></RestaurantCarousel>
       new
-      <RestaurantCarousel restaurantList = {newRes.restaurants}></RestaurantCarousel>
+      <RestaurantCarousel restaurantList = {newRes}></RestaurantCarousel>
     </div>
   );
 }
