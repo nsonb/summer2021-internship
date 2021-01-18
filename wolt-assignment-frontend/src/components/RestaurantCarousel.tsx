@@ -68,6 +68,6 @@ const carousel: React.CSSProperties = {
 
 const topBar: React.CSSProperties = {
     display: 'flex',
-    
+    fontSize: '1.2rem',
     width: '100%'
 }

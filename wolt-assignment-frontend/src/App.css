@@ -12,3 +12,7 @@ p{
     cursor: pointer;
 }
 
+button {
+    border: none
+}
+
