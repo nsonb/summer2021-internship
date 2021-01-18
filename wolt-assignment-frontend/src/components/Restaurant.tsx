@@ -44,8 +44,8 @@ const Restaurant = (props: {restaurant : restaurantData}) => {
         <div style={blurhash}>
             <Blurhash
                 hash={hash}
-                width={160}
-                height={160}
+                width={parseFloat(getComputedStyle(document.documentElement).fontSize)*8}
+                height={parseFloat(getComputedStyle(document.documentElement).fontSize)*8}
                 resolutionX={32}
                 resolutionY={32}
                 punch={1}

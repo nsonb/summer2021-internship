@@ -40,6 +40,7 @@ const RestaurantCarousel = (props: {restaurantList : restaurantData[], title: st
     return (
         <div style={style}>
             <div style = {topBar}>
+                <p>{props.title}</p>
                 <button className='hover' onClick = {() => {getNext(false)}}>-</button>
                 <button className='hover' onClick = {() => {getNext(true)}}>+</button>
             </div>
@@ -53,9 +54,10 @@ export default RestaurantCarousel
 
 const style: React.CSSProperties = {
     display: "flex",
-    flexDirection: 'row',
     width: '100%',
-    minWidth: '320px'
+    minWidth: '320px',
+    flexDirection: 'column',
+    marginBottom: '1.5rem',
 }
 
 const carousel: React.CSSProperties = {
@@ -64,5 +66,7 @@ const carousel: React.CSSProperties = {
 }
 
 const topBar: React.CSSProperties = {
-
+    display: 'flex',
+    
+    width: '100%'
 }
