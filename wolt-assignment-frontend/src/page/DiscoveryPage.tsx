@@ -1,13 +1,15 @@
 import RestaurantCarousel from '../components/RestaurantCarousel'
-import {popularRes, newRes, nearRes} from '../api/discoveryPage';
-import { restaurantData } from '../types/type';
+import {resData} from '../api/discovery';
 
 const DiscoveryPage = () => {
-    console.log(popularRes)
+    const renderedRestaurant = resData.map((item) => {
+        console.log(item)
+        return <RestaurantCarousel restaurantList = {item.restaurants}  title={item.title}></RestaurantCarousel>
+    })
     return (
         <div>
-            popular
-            <RestaurantCarousel restaurantList = {popularRes as restaurantData[]}></RestaurantCarousel>
+            {renderedRestaurant}
+            
         </div>
     )
 }

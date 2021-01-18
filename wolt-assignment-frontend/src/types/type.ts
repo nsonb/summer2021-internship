@@ -10,3 +10,9 @@ export interface restaurantData {
     "popularity": number
 }
 
+export interface dataWrapper { 
+  "title": string,
+  "restaurants": restaurantData[] 
+}
+
+

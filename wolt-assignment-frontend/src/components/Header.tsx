@@ -13,7 +13,7 @@ const Header = () => {
     }
     return (
         <div style= {style}>
-            <img src = {logo} />
+            <img src = {logo} alt='name of the appp: Wolt'/>
         </div>
     )
 }
