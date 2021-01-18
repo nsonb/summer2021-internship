@@ -1,11 +1,22 @@
 import DiscoveryPage from './page/DiscoveryPage';
+import Header from './components/Header'
 import './App.css'
 
 const App = () => {
+  const pageContainer: React.CSSProperties = {
+
+  }
+
+  const app: React.CSSProperties = {
+    width: '100vw'
+  }
+
   return (
-    <div>
-      <DiscoveryPage/>
-      
+    <div style = {app}>
+      <Header/>
+      <div style = {pageContainer}>
+        <DiscoveryPage/>
+      </div>
     </div>
   );
 }

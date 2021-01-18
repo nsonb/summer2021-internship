@@ -9,12 +9,13 @@ const RestaurantCarousel = (props: {restaurantList : restaurantData[]}) => {
     const style: React.CSSProperties = {
         display: "flex",
         flexDirection: 'row',
+        width: '100%',
+        minWidth: '320px'
     }
 
     const carousel: React.CSSProperties = {
         display: "flex",
         flexDirection: 'row',
-        width: '900px',
     }
 
     const getNext = (next: boolean) => {
@@ -30,7 +31,7 @@ const RestaurantCarousel = (props: {restaurantList : restaurantData[]}) => {
 
     useEffect(() => {
         let tempList: restaurantData[] = [];
-        for(let i = 0; i <  5 && i < restaurantList.length; i++) {
+        for(let i = 0; i <  3 && i < restaurantList.length; i++) {
             if(i + currentIndex >= restaurantList.length) {
                 tempList.push(restaurantList[i + currentIndex - restaurantList.length]);
             } else if (i + currentIndex < 0) {
