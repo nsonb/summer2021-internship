@@ -1,13 +1,10 @@
-import {popularRes, newRes, nearRes} from './api/discoveryPage';
-import RestaurantCarousel from './components/RestaurantCarousel';
-import { restaurantData } from './types/type';
+import DiscoveryPage from './page/DiscoveryPage';
 import './App.css'
 
 const App = () => {
   return (
     <div>
-      popular
-      <RestaurantCarousel restaurantList = {popularRes as restaurantData[]}></RestaurantCarousel>
+      <DiscoveryPage/>
       
     </div>
   );
