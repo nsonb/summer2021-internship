@@ -4,7 +4,7 @@ import {resData} from '../api/discovery';
 const DiscoveryPage = () => {
     const renderedRestaurant = resData.map((item) => {
         console.log(item)
-        return <RestaurantCarousel restaurantList = {item.restaurants}  title={item.title}></RestaurantCarousel>
+        return <RestaurantCarousel restaurantList = {item.restaurants}  title={item.title} key={item.title}></RestaurantCarousel >
     })
     return (
         <div style={style}>
@@ -18,6 +18,9 @@ const style: React.CSSProperties = {
     minWidth: '320px',
     maxWidth: '1024px',
     margin: 'auto',
-    padding: '2rem'
+    marginTop: '2rem',
+    display: 'flex',
+    flexDirection: 'column',
+    alignContent: 'center'
 }
 export default DiscoveryPage;

@@ -2,7 +2,7 @@ import logo from '../img/wolt-logo-vector.svg'
 
 const Header = () => {
     const style: React.CSSProperties = {
-        width: '100%',
+        width: '100vw',
         minWidth: '320px',
         height: '4rem',
         background: 'rgb(0, 194, 232)',

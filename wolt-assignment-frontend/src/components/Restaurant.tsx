@@ -2,8 +2,8 @@ import { Blurhash } from "react-blurhash";
 import { restaurantData } from '../types/type';
 const style: React.CSSProperties = {
     display: 'flex',
-    width: '5rem',
-    height: '5rem',
+    width: '8rem',
+    height: '6rem',
     position: 'relative',
     borderRadius: '1rem',
     overflow: 'hidden'
@@ -14,9 +14,9 @@ const name: React.CSSProperties = {
     position: 'absolute',
     top: 0,
     left: 0,
-    padding: '0.5rem',
+    padding: '0.3rem',
     width: '100%',
-    height: '1.5rem',
+    height: '1.2rem',
     backgroundColor: 'white',
     fontSize: '1rem'
 }

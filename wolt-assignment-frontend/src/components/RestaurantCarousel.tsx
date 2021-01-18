@@ -56,6 +56,7 @@ const style: React.CSSProperties = {
     display: "flex",
     width: '100%',
     minWidth: '320px',
+    height: '8rem',
     flexDirection: 'column',
     marginBottom: '1.5rem',
 }
