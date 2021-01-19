@@ -4,11 +4,11 @@ import './App.css'
 
 const App = () => {
   const pageContainer: React.CSSProperties = {
-
+    width: '100%'
   }
 
   const app: React.CSSProperties = {
-    width: '100vw'
+    
   }
 
   return (

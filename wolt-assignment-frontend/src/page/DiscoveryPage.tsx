@@ -14,11 +14,9 @@ const DiscoveryPage = () => {
 }
 
 const style: React.CSSProperties = {
-    width: '60%',
-    minWidth: '320px',
-    maxWidth: '1024px',
+    width: '320px',
     margin: 'auto',
-    marginTop: '2rem',
+    marginTop: '0.5rem',
     display: 'flex',
     flexDirection: 'column',
     alignContent: 'center'

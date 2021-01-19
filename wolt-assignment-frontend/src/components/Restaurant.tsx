@@ -1,12 +1,14 @@
 import { Blurhash } from "react-blurhash";
 import { restaurantData } from '../types/type';
+
 const style: React.CSSProperties = {
     display: 'flex',
-    width: '8rem',
-    height: '6rem',
+    width: '6.5rem',
+    height: '9rem',
     position: 'relative',
-    borderRadius: '1rem',
-    overflow: 'hidden'
+    borderRadius: '0.5rem',
+    overflow: 'hidden',
+    boxShadow: '1px 1px rgba(0, 0, 255, .2)'
 }
 
 const name: React.CSSProperties = {
@@ -15,18 +17,12 @@ const name: React.CSSProperties = {
     top: 0,
     left: 0,
     padding: '0.3rem',
-    width: '100%',
-    height: '1.2rem',
+    width: 'calc(100% - 0.6rem)',
+    height: '3.2rem',
     backgroundColor: 'white',
-    fontSize: '1rem'
+    fontSize: '0.9rem',
 }
 
-const online: React.CSSProperties = {
-    display:'flex',
-    position: 'absolute',
-    bottom: 0,
-    right: 0
-}
 
 const blurhash: React.CSSProperties = {
     display:'flex',
@@ -34,18 +30,29 @@ const blurhash: React.CSSProperties = {
     left: 0,
     top: 0,
     zIndex: -2,
-    overflow: "hidden"
+    overflow: "hidden",
 }
 
 const Restaurant = (props: {restaurant : restaurantData}) => {
     const hash = props.restaurant.blurhash
-    return <div key={props.restaurant.blurhash} style={style}>
+    const online: React.CSSProperties = {
+        display:'flex',
+        position: 'absolute',
+        bottom: '0.5rem',
+        right: '0.5rem',
+        fontSize: '0.8rem',
+        padding: '0.2rem',
+        color: (props.restaurant.online? "white" : "white"),
+        background: (props.restaurant.online? "green" : "gray"),
+        borderRadius: '0.5rem'
+    }
+    return <div key={props.restaurant.blurhash} style={style} className='hover zoom'>
         <p style= {name}>{props.restaurant.name}</p>
-        <div style={blurhash}>
+        <div style={blurhash} className='zoom'>
             <Blurhash
                 hash={hash}
-                width={parseFloat(getComputedStyle(document.documentElement).fontSize)*8}
-                height={parseFloat(getComputedStyle(document.documentElement).fontSize)*8}
+                width={parseFloat(getComputedStyle(document.documentElement).fontSize)*10}
+                height={parseFloat(getComputedStyle(document.documentElement).fontSize)*10}
                 resolutionX={32}
                 resolutionY={32}
                 punch={1}
