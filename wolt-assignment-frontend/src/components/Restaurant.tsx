@@ -8,7 +8,8 @@ const style: React.CSSProperties = {
     position: 'relative',
     borderRadius: '0.5rem',
     overflow: 'hidden',
-    boxShadow: '1px 1px rgba(0, 0, 255, .2)'
+    boxShadow: '1px 1px rgba(0, 0, 255, .2)',
+    margin: '3px'
 }
 
 const name: React.CSSProperties = {
@@ -51,8 +52,8 @@ const Restaurant = (props: {restaurant : restaurantData}) => {
         <div style={blurhash} className='zoom'>
             <Blurhash
                 hash={hash}
-                width={parseFloat(getComputedStyle(document.documentElement).fontSize)*10}
-                height={parseFloat(getComputedStyle(document.documentElement).fontSize)*10}
+                width={parseFloat(getComputedStyle(document.documentElement).fontSize)*8}
+                height={parseFloat(getComputedStyle(document.documentElement).fontSize)*8}
                 resolutionX={32}
                 resolutionY={32}
                 punch={1}

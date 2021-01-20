@@ -15,4 +15,11 @@ export interface dataWrapper {
   "restaurants": restaurantData[] 
 }
 
+export interface refElement extends HTMLDivElement {
+  current?:  {
+      offsetWidth: number
+      offsetHeight: number
+  }
+}
+
 
