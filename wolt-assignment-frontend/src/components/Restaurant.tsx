@@ -52,8 +52,8 @@ const Restaurant = (props: {restaurant : restaurantData}) => {
         <div style={blurhash} className='zoom'>
             <Blurhash
                 hash={hash}
-                width={parseFloat(getComputedStyle(document.documentElement).fontSize)*8}
-                height={parseFloat(getComputedStyle(document.documentElement).fontSize)*8}
+                width={parseFloat(getComputedStyle(document.documentElement).fontSize)*10}
+                height={parseFloat(getComputedStyle(document.documentElement).fontSize)*10}
                 resolutionX={32}
                 resolutionY={32}
                 punch={1}
