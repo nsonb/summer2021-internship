@@ -67,6 +67,7 @@ const title: React.CSSProperties = {
     width: 'calc(100% - 4.6rem)',
     padding: 'auto',
     verticalAlign: 'center',
+    fontFamily: "'Martel Sans', sans-serif",
     fontWeight: 2
 }
 

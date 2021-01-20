@@ -7,14 +7,15 @@ const DiscoveryPage = () => {
         return <RestaurantCarousel restaurantList = {item.restaurants}  title={item.title} key={item.title}></RestaurantCarousel >
     })
     return (
-        <div style={style}>
+        <div style={style} className='discovery-page'>
             {renderedRestaurant} 
         </div>
     )
 }
 
 const style: React.CSSProperties = {
-    width: '320px',
+    minWidth: '320px',
+    width: '60%',
     margin: 'auto',
     marginTop: '0.5rem',
     display: 'flex',
