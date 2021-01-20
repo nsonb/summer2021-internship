@@ -66,7 +66,8 @@ const style: React.CSSProperties = {
 const title: React.CSSProperties = {
     width: 'calc(100% - 4.6rem)',
     padding: 'auto',
-    verticalAlign: 'center'
+    verticalAlign: 'center',
+    fontWeight: 2
 }
 
 const button: React.CSSProperties = {
