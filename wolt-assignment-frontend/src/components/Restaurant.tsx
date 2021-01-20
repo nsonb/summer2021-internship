@@ -3,13 +3,14 @@ import { restaurantData } from '../types/type';
 
 const style: React.CSSProperties = {
     display: 'flex',
-    width: '6.5rem',
+    width: '36%',
+    maxWidth: '12rem',
     height: '9rem',
     position: 'relative',
     borderRadius: '0.5rem',
     overflow: 'hidden',
-    boxShadow: '1px 1px rgba(0, 0, 255, .2)',
-    margin: '3px'
+    boxShadow: '13px 15px 15px -8px rgba(0, 194, 232, 0.1)',
+    marginRight: '0.4rem'
 }
 
 const name: React.CSSProperties = {
@@ -52,8 +53,8 @@ const Restaurant = (props: {restaurant : restaurantData}) => {
         <div style={blurhash} className='zoom'>
             <Blurhash
                 hash={hash}
-                width={parseFloat(getComputedStyle(document.documentElement).fontSize)*10}
-                height={parseFloat(getComputedStyle(document.documentElement).fontSize)*10}
+                width={parseFloat(getComputedStyle(document.documentElement).fontSize)*12}
+                height={parseFloat(getComputedStyle(document.documentElement).fontSize)*12}
                 resolutionX={32}
                 resolutionY={32}
                 punch={1}

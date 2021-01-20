@@ -12,7 +12,7 @@ const RestaurantCarousel = (props: {restaurantList : restaurantData[], title: st
     const [ currentIndex, setCurrentIndex] = useState<number>(0);
     const myRef = useRef<HTMLDivElement>(null)
     const { width } = useContainerDimensions(myRef as unknown as refElement)
-    const maxDisplayed = width / (16*8);
+    const maxDisplayed = width / (16*8) > 5 ? 5 : width / (16*8);
 
     const getNext = (next: boolean) => {
         let index = next === true? currentIndex+1 : currentIndex-1;
@@ -27,7 +27,7 @@ const RestaurantCarousel = (props: {restaurantList : restaurantData[], title: st
 
     useEffect(() => {
         let tempList: restaurantData[] = [];
-        for(let i = 0; i <=  maxDisplayed && i < restaurantList.length; i++) {
+        for(let i = 0; i <  maxDisplayed && i < restaurantList.length; i++) {
             if(i + currentIndex >= restaurantList.length) {
                 tempList.push(restaurantList[i + currentIndex - restaurantList.length]);
             } else if (i + currentIndex < 0) {
@@ -50,7 +50,7 @@ const RestaurantCarousel = (props: {restaurantList : restaurantData[], title: st
         height: 'fit-content',
         flexDirection: 'column',
         alignContent: 'center',
-        margin: ' 0.5rem auto'
+        margin: ' 0.8rem auto'
     }
     
     const title: React.CSSProperties = {
@@ -76,15 +76,15 @@ const RestaurantCarousel = (props: {restaurantList : restaurantData[], title: st
         marginTop: '0.2rem',
         display: "flex",
         flexDirection: 'row',
-        flex: 'auto',
-        justifyContent: maxDisplayed >= displayed.length ? 'start':'space-between'
+        justifyContent: 'start',
+        flex: '1 1'
     }
     
     const topBar: React.CSSProperties = {
         display: 'flex',
         fontSize: '1.2rem',
         width: '100%',
-        height: '2rem',
+        height: '2.5rem',
         marginBottom: '0.2rem'
     }
 
