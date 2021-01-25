@@ -1,6 +1,7 @@
 import {useState, useEffect} from 'react'
 import  {refElement} from '../types/type'
 
+// this custom hooks take a refelement from a component and return the dimension of that component
 export const useContainerDimensions = (myRef : refElement) => {
     const getDimensions = () => ({
       width: myRef?.current?.offsetWidth || 0,

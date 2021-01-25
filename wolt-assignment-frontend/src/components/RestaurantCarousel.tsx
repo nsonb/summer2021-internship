@@ -7,7 +7,7 @@ const RestaurantCarousel = (props: {restaurantList : restaurantData[], title: st
     const restaurantList = props.restaurantList.sort((a: restaurantData, b: restaurantData) => {
         return (a.online === b.online) ? 0 : a.online? -1 : 1
     });
-    // getComputedStyle(document.documentElement).fontSize)*8
+    
     const [ displayed, setDisplay] = useState<restaurantData[]>(restaurantList.length < 5 ? restaurantList : restaurantList.slice(0,5))
     const [ currentIndex, setCurrentIndex] = useState<number>(0);
     const myRef = useRef<HTMLDivElement>(null)
@@ -94,8 +94,18 @@ const RestaurantCarousel = (props: {restaurantList : restaurantData[], title: st
                 <p style={title}>{props.title}</p>
                 {maxDisplayed > displayed.length ? null : 
                     <div style={buttonContainer}>
-                        <button className='hover' onClick = {() => {getNext(false)}} style={button}>{"<"}</button>
-                        <button className='hover' onClick = {() => {getNext(true)}} style={button}>{">"}</button>
+                        <button 
+                            className='hover' 
+                            onClick = {() => {getNext(false)}} 
+                            style={button}>
+                                {"<"}
+                        </button>
+                        <button 
+                            className='hover' 
+                            onClick = {() => {getNext(true)}} 
+                            style={button}>
+                                {">"}
+                        </button>
                     </div>}
             </div>
             <div style = {carousel}>

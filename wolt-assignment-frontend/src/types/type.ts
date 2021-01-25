@@ -1,3 +1,5 @@
+// contain various types of props and data model for the json import
+
 export interface restaurantData {
     "blurhash": string,
     "launch_date": string,
@@ -21,5 +23,7 @@ export interface refElement extends HTMLDivElement {
       offsetHeight: number
   }
 }
+
+
 
 

@@ -3,7 +3,13 @@ import {resData} from '../api/discovery';
 
 const DiscoveryPage = () => {
     const renderedRestaurant = resData.map((item) => {
-        return <RestaurantCarousel restaurantList = {item.restaurants}  title={item.title} key={item.title}></RestaurantCarousel >
+        return (
+            <RestaurantCarousel 
+                restaurantList = {item.restaurants}  
+                title={item.title} 
+                key={item.title} 
+            />
+        )
     })
     return (
         <div style={style} className='discovery-page'>
